@@ -1,8 +1,5 @@
 
-# This is the user-interface definition of a Shiny web application.
-# You can find out more about building applications with Shiny here:
-#
-# http://shiny.rstudio.com
+# UI.R for Wine Quality Prediction App
 #
 
 library(shiny)
@@ -12,7 +9,7 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Wine quality prediction"),
 
-  # Sidebar with a slider input for number of bins
+  # Sidebar
   sidebarLayout(
     sidebarPanel(
         helpText("You can change learning option here:"),
@@ -48,7 +45,7 @@ shinyUI(fluidPage(
       verbatimTextOutput("pred_tresh")     
     ),
 
-    # Show a plot of the generated distribution
+    # Show the ROC plot and Accuracy
     mainPanel(
         tabsetPanel(
             tabPanel("Prediction",
